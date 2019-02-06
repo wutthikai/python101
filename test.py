@@ -15,9 +15,11 @@ def check_temp():
 if __name__ == '__main__':
     send = input("Enter your Temperature: ")
     while send != 'q':
-        send = int(send)
-
-        print(check_temp(send))
+        if send.isnumeric():
+            send = int(send)
+            print(check_temp(send))
+        else:
+            print("You must enter number")
 
         send = input("Enter your Temperature: ")
 
